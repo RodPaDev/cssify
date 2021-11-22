@@ -5,7 +5,6 @@ go 1.17
 require (
 	github.com/TwiN/go-color v1.0.1
 	github.com/cheggaaa/pb/v3 v3.0.8
-	github.com/julvo/htmlgo v0.0.0-20200505154053-2e9f4b95a223
 )
 
 require (

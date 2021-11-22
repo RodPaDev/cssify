@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	tColor "github.com/TwiN/go-color"
 	"html/template"
 	"log"
 	"os"
@@ -54,4 +55,15 @@ func fileOpen(path string) *os.File {
 		log.Fatal(err)
 	}
 	return file
+}
+
+func printCommandHelp() {
+	fmt.Println(tColor.White + "CSSify is a tool to convert a image to HTML & CSS")
+	fmt.Print("\nUsage:\n\n")
+	fmt.Print("\tcssify <image path> [arguments]\n\n")
+	fmt.Println("Flags:")
+	fmt.Println("  -h, -hex\tHexadecimal with transparency DEFAULT")
+	fmt.Println("  -r, -rgb\tRed Green Blue with transparency")
+	fmt.Print("\n")
+	os.Exit(0)
 }

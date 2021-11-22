@@ -1,16 +1,15 @@
 package main
 
 import (
-	"log"
-	"math"
-	"os"
 	"fmt"
 	"image"
 	"image/color"
 	"image/draw"
 	_ "image/jpeg"
 	_ "image/png"
-	tColor "github.com/TwiN/go-color"
+	"log"
+	"math"
+	"os"
 )
 
 type Cssify struct {
@@ -24,16 +23,8 @@ type Pixel struct {
 }
 
 func main() {
-
 	if len(os.Args) <= 1 {
-		fmt.Println(tColor.White + "CSSify is a tool to convert a image to HTML & CSS")
-		fmt.Print("\nUsage:\n\n")
-		fmt.Print("\tcssify <image path> [arguments]\n\n")
-		fmt.Println("Flags:")
-		fmt.Println("  -h, -hex\tHexadecimal with transparency DEFAULT")
-		fmt.Println("  -r, -rgb\tRed Green Blue with transparency")
-		fmt.Print("\n")
-		os.Exit(0)
+		printCommandHelp()
 	}
 
 	prettyPrint("---- CSSify v0.1 ----", true)
@@ -56,8 +47,10 @@ func main() {
 		Height: dst.Bounds().Dy(),
 	}
 
-	cssify(&cssImage)
+	file := createFile()
+	defer file.Close()
 
+	htmlGenerator(Cssify{Pixels: cssImage.Pixels, Width: cssImage.Width, Height: cssImage.Height})
 }
 
 func getCssColors(img image.Image) []*Pixel {
@@ -90,11 +83,4 @@ func rgbaToCssColor(rgba *color.RGBA, isRgb bool) *Pixel {
 	}
 
 	return &Pixel{Color: fmt.Sprintf("#%02x%02x%02x%02x", rgba.R, rgba.G, rgba.B, rgba.A)}
-}
-
-func cssify(cssImage *Cssify) {
-	file := createFile()
-	defer file.Close()
-
-	htmlGenerator(Cssify{Pixels: cssImage.Pixels, Width: cssImage.Width, Height: cssImage.Height})
 }
