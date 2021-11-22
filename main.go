@@ -47,9 +47,6 @@ func main() {
 		Height: dst.Bounds().Dy(),
 	}
 
-	file := createFile()
-	defer file.Close()
-
 	htmlGenerator(Cssify{Pixels: cssImage.Pixels, Width: cssImage.Width, Height: cssImage.Height})
 }
 
