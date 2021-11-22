@@ -26,6 +26,14 @@ To run the source code:
 go run . <path-to-image>
 ```
 
+## Demo
+
+
+
+https://user-images.githubusercontent.com/47316946/142940746-eff61a10-be70-4c01-972c-3153ce6c8ad0.mp4
+
+
+
 ## Future Goals
 
 - Create a fully fledged webapp using the go application with WebAssembly
