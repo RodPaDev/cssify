@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .cssified-img {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .pixel {
+        width: 1px;
+        height: 1px;
+        display: inline;
+      }
+    </style>
+    <title>CSSify</title>
+  </head>
+  <body>
+    <div
+      class="cssified-img"
+      style="width: {{ .Width }}px; height: {{ .Height }}px;"
+    >
+      {{range .Pixels}}
+      <div class="pixel" style="background-color: {{.Color}};"></div>
+      {{end}}
+    </div>
+  </body>
+</html>
