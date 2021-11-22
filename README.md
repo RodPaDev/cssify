@@ -1,5 +1,10 @@
 # CSSify
 
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/RodPaDev/cssify/main/images/64x64_Logo.png" alt="" />
+</p>
+
 This project is written in go and will turn any png to a `HTML` page.
 It's not a very efficient way of rendering an image but it was fun a project to learn go.
 
