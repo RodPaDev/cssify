@@ -20,3 +20,7 @@ To run the source code:
 ```
 go run . <path-to-image>
 ```
+
+## Future Goals
+
+- Create a fully fledged webapp using the go application with WebAssembly
