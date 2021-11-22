@@ -10,7 +10,7 @@ import (
 )
 
 func htmlGenerator(cssify Cssify) {
-	fmt.Println("HTML GENERATOR")
+	prettyPrint("HTML Generated", true)
 	template, err := template.ParseFiles("./template/cssify.html")
 	if err != nil {
 		fmt.Println("Error: File could not be opened")
