@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/RodPaDev/cssify/main/images/64x64_Logo.png" alt="" />
+    <img src="https://raw.githubusercontent.com/RodPaDev/cssify/main/images/64x64_image.png" alt="" />
 </p>
 
 This project is written in go and will turn any png to a `HTML` page.
